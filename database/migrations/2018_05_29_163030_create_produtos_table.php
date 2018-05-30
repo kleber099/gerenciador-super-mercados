@@ -18,6 +18,18 @@ class CreateProdutosTable extends Migration
             $table->string('nome');
             $table->string('codigo')->unique();
             $table->timestamps();
+
+        });
+
+        Schema::create('loja_produto', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('loja_id')->unsigned();
+            $table->integer('produto_id')->unsigned();
+            $table->integer('quantidade');
+            $table->timestamps();
+
+            $table->foreign('loja_id')->references('id')->on('lojas');
+            $table->foreign('produto_id')->references('id')->on('produtos');
         });
     }
 
@@ -28,6 +40,7 @@ class CreateProdutosTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('loja_produto');
         Schema::dropIfExists('produtos');
     }
 }

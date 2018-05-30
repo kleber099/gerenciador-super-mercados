@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resources([
+    'lojas' => 'LojaController',
+    'produtos' => 'ProdutoController',
+]);
+
+

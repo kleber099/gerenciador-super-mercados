@@ -17,6 +17,7 @@ class CreateLojasTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->timestamps();
+
         });
     }
 
