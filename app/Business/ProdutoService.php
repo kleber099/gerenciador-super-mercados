@@ -2,6 +2,7 @@
 namespace App\Business;
 
 use App\Contracts\Business\ProdutoServiceContract;
+use App\Contracts\Repositories\ProdutoRepositoryContract;
 
 /**
  * Created by PhpStorm.

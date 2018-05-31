@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 use App\Contracts\Repositories\LojaRepositoryContract;
 use App\Models\Loja;
+use App\Models\Produto;
 
 /**
  * Created by PhpStorm.
@@ -25,7 +26,7 @@ class LojaRepository implements LojaRepositoryContract
 
     public function retornar(int $id)
     {
-        $loja = $this->loja->find($id);
+        $loja = $this->loja->with('produtos')->find($id);
         return $loja;
     }
 
@@ -49,6 +50,16 @@ class LojaRepository implements LojaRepositoryContract
         $this->loja->destroy($id);
 
         return $loja;
+    }
+
+    public function vincularProduto(Loja $loja, Produto $produto)
+    {
+        $loja->produtos()->attach($produto->id);
+    }
+
+    public function desvincularProduto(Loja $loja, Produto $produto)
+    {
+        $loja->produtos()->detach($produto->id);
     }
 
 }

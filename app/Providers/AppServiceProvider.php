@@ -27,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('App\Contracts\Repositories\LojaRepositoryContract', 'App\Repositories\LojaRepository');
         $this->app->bind('App\Contracts\Business\ProdutoServiceContract', 'App\Business\ProdutoService');
         $this->app->bind('App\Contracts\Repositories\ProdutoRepositoryContract', 'App\Repositories\ProdutoRepository');
+        $this->app->bind('App\Contracts\Business\VinculadorLojaProdutoServiceContract', 'App\Business\VinculadorLojaProdutoService');
 
     }
 }

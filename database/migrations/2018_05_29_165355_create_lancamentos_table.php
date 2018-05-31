@@ -17,7 +17,10 @@ class CreateLancamentosTable extends Migration
             $table->increments('id');
             $table->date('chegada');
             $table->double('valor');
+            $table->integer('loja_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('loja_id')->references('id')->on('lojas');
         });
     }
 

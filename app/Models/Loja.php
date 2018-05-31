@@ -10,7 +10,7 @@ class Loja extends Model
 
     public function produtos()
     {
-        return $this->belongsToMany('App\Models\Produto', 'quantidade');
+        return $this->belongsToMany('App\Models\Produto');
     }
 
     public function lancamentos()

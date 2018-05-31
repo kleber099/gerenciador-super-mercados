@@ -25,7 +25,6 @@ class CreateProdutosTable extends Migration
             $table->increments('id');
             $table->integer('loja_id')->unsigned();
             $table->integer('produto_id')->unsigned();
-            $table->integer('quantidade');
             $table->timestamps();
 
             $table->foreign('loja_id')->references('id')->on('lojas');

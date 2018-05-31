@@ -43,7 +43,8 @@ class ProdutoController extends Controller
     public function store(ProdutoRequest $request)
     {
         $data = $request->all();
-        $produto = $this->produtoService>criar($data);
+
+        $produto = $this->produtoService->criar($data);
 
         return response()->json($produto);
     }
