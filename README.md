@@ -23,3 +23,5 @@ Após clonar o projeto executar os seguintes comandos:
     * DB_PASSWORD=[senha]
  * Executar o seguinte comando para gerar a chave da aplicação:
     * php artisan key:generate
+ * Criar o banco de dados conforme configurado na chave DB_DATABASE e executar o seguinte comando:
+    * php artisan migrate
