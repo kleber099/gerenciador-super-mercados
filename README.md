@@ -25,3 +25,9 @@ Após clonar o projeto executar os seguintes comandos:
     * php artisan key:generate
  * Criar o banco de dados conforme configurado na chave DB_DATABASE e executar o seguinte comando:
     * php artisan migrate
+      
+ # Arterfatos
+No diretório artefatos do projeto contem alguns recursos utilizados no projeto que são: Diagrama de banco de dados, Coleções de Lojas e Produtos do Postman.
+
+# Diagrama de banco de dados
+![Diagrama Banco de Dados](./artefatos/diagram.png)
