@@ -8,21 +8,12 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import VueRouter from 'vue-router';
 
 import Loja from './components/loja/Loja.vue';
 import LojaDetalhe from './components/loja/Detalhe.vue';
 import Produto from './components/produto/Produto.vue';
 
 import store from './store';
-
-import { routes } from './routes';
-const router = new VueRouter({
-    routes,
-    mode: 'history'
-});
-
-Vue.use(VueRouter);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -35,6 +26,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app',
     store,
-    router,
     components: {Loja, LojaDetalhe, Produto}
 });
