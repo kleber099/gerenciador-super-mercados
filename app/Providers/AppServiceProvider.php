@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('App\Contracts\Business\LojaServiceContract', 'App\Business\LojaService');
+        $this->app->bind('App\Contracts\Repositories\LojaRepositoryContract', 'App\Repositories\LojaRepository');
+        $this->app->bind('App\Contracts\Business\ProdutoServiceContract', 'App\Business\ProdutoService');
+        $this->app->bind('App\Contracts\Repositories\ProdutoRepositoryContract', 'App\Repositories\ProdutoRepository');
+        $this->app->bind('App\Contracts\Business\VinculadorLojaProdutoServiceContract', 'App\Business\VinculadorLojaProdutoService');
+
     }
 }
